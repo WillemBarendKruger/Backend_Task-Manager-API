@@ -1,0 +1,68 @@
+### ----------------- Auth Routing
+### Create a User
+POST http://localhost:4001/api/auth/users/register
+Content-Type: application/json
+
+{
+    "email": "willem.kruger11@gmail.com",
+    "password": "mypass123"
+}
+
+### GET specific user login return JWT token
+POST http://localhost:4001/api/auth/users/login
+Content-Type: application/json
+
+{
+    "email": "willem.kruger11@gmail.com",
+    "password": "mypass123"
+}
+
+
+# ### Update all user info
+# PUT http://localhost:4001/api/auth/users/
+# Content-Type: application/json
+
+# {
+#     "email": "willem.kruger11@gmail.com",
+#     "password": "mypass123"
+# }
+
+# ### Update user info
+# PATCH  http://localhost:4001/api/auth/users/
+# Content-Type: application/json
+
+# {
+#     "task": [1]
+# }
+
+# ### DELETE a user
+# DELETE http://localhost:4001/api/auth/users/1
+
+
+###---------------------------- Tasks Routing
+### Create a task
+POST http://localhost:4001/api/tasks
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5OGJkNDNmOS04ZDhlLTRjYmYtOGNmYS0wMzQyNjM1YTJlZjIiLCJpYXQiOjE3NDA0MTY0NTQsImV4cCI6MTc0MDQyMDA1NH0.TmWS-clSNOpfLUN5okqgws7TeiJgNsodislacuEo6vc
+
+{
+    "taskName": "Complete API development"
+}
+
+
+### GEt all tasks
+GET http://localhost:4001/api/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5OGJkNDNmOS04ZDhlLTRjYmYtOGNmYS0wMzQyNjM1YTJlZjIiLCJpYXQiOjE3NDA0MTY0NTQsImV4cCI6MTc0MDQyMDA1NH0.TmWS-clSNOpfLUN5okqgws7TeiJgNsodislacuEo6vc
+
+### Update a task/task_ID
+PUT http://localhost:4001/api/tasks/3c23e541-6fe6-4c4e-96ae-32b6d3e27ed9
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5OGJkNDNmOS04ZDhlLTRjYmYtOGNmYS0wMzQyNjM1YTJlZjIiLCJpYXQiOjE3NDA0MTY0NTQsImV4cCI6MTc0MDQyMDA1NH0.TmWS-clSNOpfLUN5okqgws7TeiJgNsodislacuEo6vc
+
+{
+    "status": "Completed"
+}
+
+### DELETE a task/task_ID
+DELETE http://localhost:4001/api/tasks/3c23e541-6fe6-4c4e-96ae-32b6d3e27ed9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5OGJkNDNmOS04ZDhlLTRjYmYtOGNmYS0wMzQyNjM1YTJlZjIiLCJpYXQiOjE3NDA0MTY0NTQsImV4cCI6MTc0MDQyMDA1NH0.TmWS-clSNOpfLUN5okqgws7TeiJgNsodislacuEo6vc
