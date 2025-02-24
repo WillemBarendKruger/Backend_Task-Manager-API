@@ -40,7 +40,7 @@ Content-Type: application/json
 
 
 ###---------------------------- Tasks Routing
-### Create a task
+### Create a task NOTE: add the token generated after you use the login next to Bearer <TOKEN_HERE>
 POST http://localhost:4001/api/tasks
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5OGJkNDNmOS04ZDhlLTRjYmYtOGNmYS0wMzQyNjM1YTJlZjIiLCJpYXQiOjE3NDA0MTY0NTQsImV4cCI6MTc0MDQyMDA1NH0.TmWS-clSNOpfLUN5okqgws7TeiJgNsodislacuEo6vc
@@ -50,11 +50,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5OGJkN
 }
 
 
-### GEt all tasks
+### GEt all tasks NOTE: add the token generated after you use the login next to Bearer <TOKEN_HERE>
 GET http://localhost:4001/api/tasks
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5OGJkNDNmOS04ZDhlLTRjYmYtOGNmYS0wMzQyNjM1YTJlZjIiLCJpYXQiOjE3NDA0MTY0NTQsImV4cCI6MTc0MDQyMDA1NH0.TmWS-clSNOpfLUN5okqgws7TeiJgNsodislacuEo6vc
 
-### Update a task/task_ID
+### Update a task/task_ID NOTE:In the address bar add the user ID generated after a user was created next to .../tasks/<ID_HERE> add the token generated after you use the login next to Bearer <TOKEN_HERE>
 PUT http://localhost:4001/api/tasks/3c23e541-6fe6-4c4e-96ae-32b6d3e27ed9
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5OGJkNDNmOS04ZDhlLTRjYmYtOGNmYS0wMzQyNjM1YTJlZjIiLCJpYXQiOjE3NDA0MTY0NTQsImV4cCI6MTc0MDQyMDA1NH0.TmWS-clSNOpfLUN5okqgws7TeiJgNsodislacuEo6vc
@@ -63,6 +63,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5OGJkN
     "status": "Completed"
 }
 
-### DELETE a task/task_ID
+### DELETE a task/task_ID NOTE:In the address bar add the user ID generated after a user was created next to .../tasks/<ID_HERE> add the token generated after you use the login next to Bearer <TOKEN_HERE>
 DELETE http://localhost:4001/api/tasks/3c23e541-6fe6-4c4e-96ae-32b6d3e27ed9
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI5OGJkNDNmOS04ZDhlLTRjYmYtOGNmYS0wMzQyNjM1YTJlZjIiLCJpYXQiOjE3NDA0MTY0NTQsImV4cCI6MTc0MDQyMDA1NH0.TmWS-clSNOpfLUN5okqgws7TeiJgNsodislacuEo6vc
