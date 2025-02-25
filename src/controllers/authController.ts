@@ -76,34 +76,6 @@ export const fetchUserLogin = async (req: Request, res:Response): Promise<any> =
     }
 }
 
-// export const fetchUserLogin = async (req: Request, res: Response): Promise<void> => {
-//     try {
-//         const { email, password } = req.body;
-
-//         const user = await prisma.user.findUnique({
-//             where: { email }
-//         });
-
-//         if (!user || !bcrypt.compareSync(password, user.password)) {
-//             res.status(401).json({ error: "Invalid email or password" });
-//             return; 
-//         }
-
-//         // JWT token creation
-//         const token = jwt.sign(
-//             { userId: user.id, role: user.role }, 
-//             process.env.JWT_SECRET as string, 
-//             { expiresIn: "1h" }
-//         );
-
-//         res.json({ message: "Login success", token });
-//     } catch (error) {
-//         console.error("Error fetching user:", error);
-//         res.status(500).json({ error: "Internal Server Error" });
-//     }
-// };
-
-
 
 // redo
 // UPDATE
